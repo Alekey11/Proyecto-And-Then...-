@@ -2,7 +2,7 @@
 ▪︎Poner el nombre de empresa o persona que le sucedió.
 ▪︎Dar pequeño resumen de lo sucedido o el contexto donde ocurrió
 
-Por: Enrique A.
+---------Por: Enrique A.
 
 #1
 El sistema de control de la nave en la Tierra usaba el sistema métrico anglosajón mientras que el sistema de navegación de la nave esperaba valores en el sistema métrico decimal.
@@ -51,3 +51,26 @@ El problema venía con el año 2000 porque, para los ordenadores, el "00" se ref
     Concretamente, el problema surgió con toda probabilidad cuando se intentó unificar plataformas escritas en diferentes lenguajes de programación.
     Fuente: https://actualidad.rt.com/actualidad/view/138158-catastrofes-programacion-culpa-software-computadora
             https://www.elmundo.es/america/2013/04/16/estados_unidos/1366141051.html
+            
+---------Por: *Juan Conde*
+
+--Problema de software Knight Capital
+
+Contexto:
+En 2013, un fracaso del programa casi llevó a la compañía de inversión Knight Capital a la bancarrota. La firma perdió medio billón de dólares en media hora porque las computadoras comenzaron a comprar y vender millones de acciones sin ningún control humano. Como resultado, los precios de las acciones de la compañía cayeron un 75% en dos días.
+Información:
+El problema fue causado por una actualización que no llegó a todos los sistemas informáticos, dejando algunos sistemas funcionando con código antiguo.
+Para permitir la participación de sus compradores en la Retail Liquidity Program (RLP) de la bolsa de Nueva York, Knight Capital hizo numerosos cambios en sus sistemas informáticos. Entre estos cambios se incluyó el desarrollo de código nuevo para SMARS, un enrutador algorítmico de alta velocidad que enviaba las órdenes al mercado. Una de las principales funciones de SMARS era recibir las órdenes de otros componentes de la plataforma de negociación de Knight (órdenes "padre") y, en función de la liquidez disponible, enviar una o más órdenes representativas (o "hijas") a sitios externos para su ejecución.
+El nuevo código RLP para SMARS pretendía reemplazar una funcionalidad conocida como Power Peg, diseñada para aumentar o disminuir el precio de las acciones de tal forma que se verificara correctamente el comportamiento de los algoritmos en entornos controlados.
+A pesar de que no volvería a usarse más tras la actualización, la funcionalidad Power Peg tenía que seguir presente ya que podía ser necesitada en el despliegue. Por ello se recodificó un selector ya existente (flag) para permitir activarla. Como esta funcionalidad iba a quedar obsoleta, Knight la eliminaría en su momento poniendo este selector con el valor adecuado.
+A finales de Julio del 2012, Knight desplegó su nuevo código RLP progresivamente en un número limitado de servidores SMARS durante varios días. Sin embargo, durante este despliegue uno de los técnicos de Knight olvidó copiar el código nuevo en uno de los servidores SMARS. Knight no tenía procesos de revisión para estos despliegues, así que nadie se percató de que uno de los servidores no estaba actualizado como debía.
+El 1 de agosto del mismo año, Knight recibió órdenes de sus brokers para empezar a participar en el RLP. Los siete servidores con el código nuevo procesaban las órdenes correctamente, pero había uno que aún mantenía el código antiguo. Como resultado, el servidor no actualizado comenzaba a enviar sin parar órdenes hijo por cada orden padre recibida a ciertos centros de trading para su ejecución sin tener en cuenta el número de ejecuciones ya realizadas (la funcionalidad Power Peg ya no existía en el sistema SMARS).
+Como el sistema SMARS no era consciente de las órdenes ya ejecutadas por ese servidor con código antiguo, Knight ejecutó 4 millones de operaciones en 154 stocks por más de 397 millones de acciones en aproximadamente 45 minutos (la continua compra/venta devaluó las acciones), lo que conllevó unas pérdidas estimadas en 460 millones de dólares.
+Cuando los técnicos se dieron cuenta del error, ya era demasiado tarde. Pese a ello, Knight Capital consiguió levantar una inversión de 400 millones de dólares (entre ellos del Grupo Jefferies) para poder hacer frente al batacazo monetario.
+Un error garrafal, debido a malos procedimientos de revisión y despliegue de actualizaciones en los sistemas informáticos.
+
+*RESUMEN*
+
+*---*Problema de software Knight Capital
+Contexto:
+En 2013, un fracaso del programa casi llevó a la compañía de inversión Knight Capital a la bancarrota. La firma perdió medio billón de dólares en media hora porque las computadoras comenzaron a comprar y vender millones de acciones sin ningún control humano. Como resultado, los precios de las acciones de la compañía cayeron un 75% en dos días.
