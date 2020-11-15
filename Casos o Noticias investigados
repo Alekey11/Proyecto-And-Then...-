@@ -26,6 +26,32 @@ Si se incluía allí "98", el sistema sabía que se estaba haciendo referencia a
 El problema venía con el año 2000 porque, para los ordenadores, el "00" se referiría a 1900. 
 ------------------Por Leandro------------------------
 
+#1
+-Explosión de ariane en 1996
+    El 4 de junio de 1996, el cohete Ariane 5 lanzado por la Agencia Espacial Europea estalló 38 segundos después de su despegue desde Kourou, en la Guayana Francesa.
+    El Ariane explotó en su primer viaje, después de una década de desarrollo, y las pérdidas se estimaron en 500 millones de dólares.
+    La causa de la explosión fue un error en el software. Un error no detectado por falta de control de la calidad del software crítico del cohete. 
+    Todo sucedió porque un número real de 64 bits (coma flotante) relacionado con la velocidad horizontal del cohete se convirtió en un entero de 16 bits.
+    Aunque encontrar el error no fue nada fácil.
+    Fuente: https://www.javiergarzas.com/2012/02/calidad-del-software-critico.html
+     
+#2
+-La catástrofe del Hartford Coliseum 
+    Sólo unas horas después de que miles de aficionados al hockey abandonaran el Hartford Coliseum, la estructura de acero de su techo se desplomaba debido al peso de la nieve. 
+    El desarrollador del software de diseño asistido (CAD) utilizado para diseñar el coliseo asumió incorrectamente que los soportes de acero del techo sólo debían aguantar 
+    la compresión de la propia estructura. Sin embargo, cuando uno de estos soportes se dobló debido al peso de la nieve, inició una reacción en cadena que hizo caer a las 
+    demás secciones del techo como si se tratara de piezas de dominó.
+    Fuente: https://pdfs.semanticscholar.org/a352/f7028417acbd1866a53f96fce62db97c1aff.pdf
+    
+#3
+-Therac-25, un caso dramático
+    Therac-25 era una máquina de radioterapia, producida por la empresa estatal canadiense de energía nuclear, que fue la causante directa de la muerte de, al menos, 
+    tres pacientes entre 1985 y 1987 a los que se suministró sobredosis masivas de radicación. La comisión investigadora concluyó que la razón de estos accidentes 
+    podía atribuirse a malas prácticas en desarrollo, mal análisis en los requerimientos y un mal diseño del software. Se constató que el código fuente no había sido 
+    revisado de forma independiente.
+    Fuente:  https://www.campusmvp.es/recursos/post/GAMBADAS-Therac-25-la-maquina-de-radiacion-asesina.aspx
+-------------------------Alejandro Cortazar----------------------------------
+    
 -Amazon (2017)
     Resumen:
     EL martes 28 de febrero de 2017 internet registró uno de esos grandes fallos que terminó afectando gran parte de las webs, 
